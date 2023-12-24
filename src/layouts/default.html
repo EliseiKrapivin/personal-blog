@@ -5,9 +5,9 @@
     {{> head }}
 </head>
 
-<body>
+<body >
 
-    <div class="page">
+    <div class="page" id="page">
         <!-- Header -->
         {{> header }}
 
@@ -18,10 +18,12 @@
         <main class="main">
             <div class = "container"> 
                 {{> body }}
+                {{> footer }}
             </div>
         </main>
     </div>
 
+    {{> contact-modal }}
     <!-- js -->
     <script src="assets/js/app.js"></script>
 </body>

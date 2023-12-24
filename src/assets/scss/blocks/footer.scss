@@ -1,0 +1,36 @@
+.nav-footer {
+    display: flex;
+    justify-content: space-between;
+    @include breakpoint($tablet-bp){
+        display: none;
+    }
+  }
+
+.nav__list-footer {
+    display: block;
+}
+
+.nav__item-footer {
+    &:hover {
+        .nav__link-footer{
+            background-color: $blue;
+            text-decoration: none;
+        }
+        > .subnav-footer {
+            display: block;
+        }
+    }
+
+}
+.nav__link-footer {
+    display: block;
+    padding: .7rem;
+
+    font-size: 1.4rem;
+    line-height: .8;
+    color: #828282;
+    text-decoration: none;
+
+    transition: background-color .2s linear ;
+
+}

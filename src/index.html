@@ -20,7 +20,7 @@ title: Personal-Blog | Home
         <time class="stories__date" datetime="2020-09-21 19:21">07.07.2023</time> 
     </div>
     <div class="stories__item">
-        <img class="stories__preview" src="assets/images/stories/stories-4.jpg" alt="">
+        <img src="assets/images/stories/stories-4.jpg" alt="" class="high-contrast">
         <div class="stories__title">Просто паук</div>
         <time class="stories__date" datetime="2020-09-21 19:21">14.03.2023</time> 
     </div>
@@ -29,15 +29,15 @@ title: Personal-Blog | Home
 
 <!--Add post --> 
 <div class="add-post">
-    <form class="add-post__form" action="/" method="post">
-        <textarea class="add-post__textarea" name="post-text" placeholder="Напишите что-нибудь"></textarea>
+    <form class="add-post__form" action="/">
+        <textarea class="add-post__textarea" name="post-text" placeholder="Напишите что-нибудь" data-autoresize></textarea>
         
         <div class="add-post__form-actions"> 
             <label class="add-post__file" for="add-post-file">
                 <input type="file" id="add-post-file">
             </label>
             <button class="add-post__send" type="submit">
-                <img src="assets/images/send.svg" alt="Отправить">
+                Отправить
             </button>
     </div>
     </form>
@@ -111,7 +111,7 @@ title: Personal-Blog | Home
 <article class="post">
     <div class="post__header post__header--preview">
         <a href="post.html">
-            <img class="post__preview" src="assets/images/post4.1.jpg" alt="Новый студент в моей группе">
+            <img  src="assets/images/post4.1.jpg " alt="Новый студент в моей группе" class="black-and-white">
         </a>
     </div>
     <div class="post__content">
@@ -152,3 +152,4 @@ title: Personal-Blog | Home
         <a class="pagination__link" href="#">&gt;</a>
     </li>
 </ul>
+

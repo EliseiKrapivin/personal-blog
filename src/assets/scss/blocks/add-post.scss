@@ -5,17 +5,22 @@
     background-color: $secondary;
     box-shadow: 0 15px 25px rgba($black, .45);
     border-radius: 5px;
+
+    @include breakpoint($mobile-bp){
+        padding: 1.5rem;
+    }
 }
 
 .add-post__form {
     display: flex;
-    align-items: center;
+    align-items: flex-end;
 }
 
 .add-post__textarea {
     display: block;
-    width: 80%;
-    height: 26px;
+    flex-grow: 1;
+    height: 34px;
+    overflow: hidden;
 
     border: none;
     background: transparent;
@@ -31,9 +36,14 @@
 }
 
 .add-post__form-actions{
-    width: 20%;
+    width: 12rem;
+    flex-shrink: 0;
     display: flex;
     justify-content: flex-end;
+
+    @include breakpoint($mobile-bp){
+        width: 9rem;
+    }
 
 }
 
@@ -55,20 +65,39 @@
     &:hover {
         background-color: darken(#EBEBEB, 5%);
     }
+
+    @include breakpoint($mobile-bp){
+        width: 3.4rem;
+        height: 3.4rem;
+        background-size: 15px;
+    }
 }
 
 .add-post__send {
     margin-left: 1.5rem ;
+
+    font-size: 0;
+    color: transparent;
+
+    background: $blue url("/assets/images/send.svg") center no-repeat ;
+    background-color: $blue;
+
     display: block;
     width:  4.4rem;
     height: 4.4rem;
     
     border-radius: 50% ;
     cursor: pointer;
-    background-color: $blue;
-    border: none;
+    
+    border: none; 
 
     &:hover {
         background-color: darken($blue, 5%);
+    }
+
+    @include breakpoint($mobile-bp){
+        width: 3.4rem;
+        height: 3.4rem;
+        background-size: 12px;
     }
 }

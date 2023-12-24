@@ -10,7 +10,7 @@ title: Personal-Blog | Post
     </div>
 
     <div class="post__header  post__header--open">
-        <h1 class="post__title  post__title--mb0">Как писать код?</h1>
+        <h1 class="post__title  post__title--open">Как писать код?</h1>
         <ul class="post__data">
             <li class="post__data-item">
                 <time datetime="2020-06-21 19:20">21.06.2023</time>
@@ -37,36 +37,19 @@ title: Personal-Blog | Post
                 <img src="assets/images/image.jpg" alt="">
             </p>
 
-            <h4>Причины почему я разместил здесь нумерованный список и таблицу:</h4>
-            <ol>
-                <li>Их нужно вставить в сайт согласно чек-листу</li>
-                <li>Я не придумал где еще их можно использовать в моем блоге, кроме как тут</li>
-                <li>С.М первый и второй пункт</li>
-                <li>С.М первый и второй пункт</li>
-                <li>С.М первый и второй пункт</li>
-            </ol>
 
-            <table>
-                <tr>
-                    <td>№</td>
-                    <td>Вставил</td>
-                    <td>:</td>
-                </tr>
-                <tr>
-                    <td>1</td>
-                    <td colspan="2">Таблицу</td>
-                </tr>
-                <tr>
-                    <td>2</td>
-                    <td>в</td>
-                    <td>¯\_(ツ)_/¯ </td>
-                </tr>
-                <tr>
-                    <td>3</td>
-                    <td>Сайт</td>
-                    <td>xd</td>
-                </tr>
-            </table>
+            <div class="slider-container">
+                <div class="slider">
+                    <div class="slide" style="background-image: url('assets/images/slider1.jpg');"></div>
+                    <div class="slide" style="background-image: url('assets/images/slider2.jpg');"></div>
+                    <div class="slide" style="background-image: url('assets/images/slider3.jpg');"></div>
+                </div>
+                <div class="controls">
+                    <button class="prev">Prev</button>
+                    <button class="next">Next</button>
+                  </div>
+            </div>
+            <script src="scripts.js"></script>
 
             <p>
                 <span class="fr-video">
@@ -111,10 +94,10 @@ title: Personal-Blog | Post
         </div> <!-- /. related-->
 
         <h3 class="post__subtitle">Обсуждение</h3>
-        
+
         <form class="form" action="/" method="post">
             <div class="form__group">
-                <textarea class="form__control  form__control--textarea" name="comment-text"
+                <textarea class="form__control  form__control--textarea " name="comment-text" data-autoresize
                     placeholder="Текст комментария"></textarea>
                 <span class="form__line"></span>
             </div>
@@ -125,15 +108,17 @@ title: Personal-Blog | Post
             <li class="comments__item"> <!--Первый комментарий-->
                 <div class="comments__header">
                     <img class="comments__avatar" src="assets/images/comments_avatar1.jpg" alt="">
-                
+
                     <div class="comments__author">
                         <div class="comments__name">Elon Musk</div>
-                        <time  class="comments__pubdate" datetime="2020-12-21 19:21">1 неделю назад</time>
+                        <time class="comments__pubdate" datetime="2020-12-21 19:21">1 неделю назад</time>
                     </div>
                 </div>
 
                 <div class="comments__text">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro, expedita! Laudantium quod sapiente ullam perferendis cumque nostrum sunt culpa accusamus sit natus dolore facere sint, error rerum! Distinctio, temporibus dignissimos.
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro, expedita! Laudantium quod sapiente
+                    ullam perferendis cumque nostrum sunt culpa accusamus sit natus dolore facere sint, error rerum!
+                    Distinctio, temporibus dignissimos.
                 </div>
                 <button class="comments__reply" type="button">ответить</button>
 
@@ -142,33 +127,37 @@ title: Personal-Blog | Post
                     <li class="comments__item"><!--Ответ на первый комментарий-->
                         <div class="comments__header">
                             <img class="comments__avatar" src="assets/images/comments_avatar2.jpg" alt="">
-                        
+
                             <div class="comments__author">
                                 <div class="comments__name">Bill Gates</div>
-                                <time  class="comments__pubdate" datetime="2020-12-21 19:21">1 неделю назад</time>
+                                <time class="comments__pubdate" datetime="2020-12-21 19:21">1 неделю назад</time>
                             </div>
                         </div>
-                        
+
                         <div class="comments__text">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro, expedita! Laudantium quod sapiente ullam perferendis cumque nostrum sunt culpa accusamus sit natus dolore facere sint, error rerum! Distinctio, temporibus dignissimos.
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro, expedita! Laudantium quod
+                            sapiente ullam perferendis cumque nostrum sunt culpa accusamus sit natus dolore facere sint,
+                            error rerum! Distinctio, temporibus dignissimos.
                         </div>
                         <button class="comments__reply" type="button">ответить</button>
-                    </li> 
+                    </li>
                 </ul><!-- Конец ответа на первый комментарий-->
             </li><!-- Конец первого комментария-->
 
             <li class="comments__item"><!--Второй комментарий-->
                 <div class="comments__header">
                     <img class="comments__avatar" src="assets/images/comments_avatar2.jpg" alt="">
-                
+
                     <div class="comments__author">
                         <div class="comments__name">Bill Gates</div>
-                        <time  class="comments__pubdate" datetime="2020-12-21 19:21">3 недели назад</time>
+                        <time class="comments__pubdate" datetime="2020-12-21 19:21">3 недели назад</time>
                     </div>
                 </div>
-                
+
                 <div class="comments__text">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro, expedita! Laudantium quod sapiente ullam perferendis cumque nostrum sunt culpa accusamus sit natus dolore facere sint, error rerum! Distinctio, temporibus dignissimos.
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro, expedita! Laudantium quod sapiente
+                    ullam perferendis cumque nostrum sunt culpa accusamus sit natus dolore facere sint, error rerum!
+                    Distinctio, temporibus dignissimos.
                 </div>
                 <button class="comments__reply" type="button">ответить</button>
 
@@ -176,15 +165,17 @@ title: Personal-Blog | Post
                     <li class="comments__item">
                         <div class="comments__header">
                             <img class="comments__avatar" src="assets/images/comments_avatar3.jpg" alt="">
-                        
+
                             <div class="comments__author">
                                 <div class="comments__name">Mark Zuckerberg</div>
-                                <time  class="comments__pubdate" datetime="2020-12-21 19:21">2 недели назад</time>
+                                <time class="comments__pubdate" datetime="2020-12-21 19:21">2 недели назад</time>
                             </div>
                         </div>
-                        
+
                         <div class="comments__text">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro, expedita! Laudantium quod sapiente ullam perferendis cumque nostrum sunt culpa accusamus sit natus dolore facere sint, error rerum! Distinctio, temporibus dignissimos.
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro, expedita! Laudantium quod
+                            sapiente ullam perferendis cumque nostrum sunt culpa accusamus sit natus dolore facere sint,
+                            error rerum! Distinctio, temporibus dignissimos.
                         </div>
                         <button class="comments__reply" type="button">ответить</button>
 
@@ -192,15 +183,18 @@ title: Personal-Blog | Post
                             <li class="comments__item">
                                 <div class="comments__header">
                                     <img class="comments__avatar" src="assets/images/comments_avatar2.jpg" alt="">
-                                
+
                                     <div class="comments__author">
                                         <div class="comments__name">Bill Gates</div>
-                                        <time  class="comments__pubdate" datetime="2020-12-21 19:21">2 недели назад</time>
+                                        <time class="comments__pubdate" datetime="2020-12-21 19:21">2 недели
+                                            назад</time>
                                     </div>
                                 </div>
-                                
+
                                 <div class="comments__text">
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro, expedita! Laudantium quod sapiente ullam perferendis cumque nostrum sunt culpa accusamus sit natus dolore facere sint, error rerum! Distinctio, temporibus dignissimos.
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro, expedita! Laudantium
+                                    quod sapiente ullam perferendis cumque nostrum sunt culpa accusamus sit natus dolore
+                                    facere sint, error rerum! Distinctio, temporibus dignissimos.
                                 </div>
                                 <button class="comments__reply" type="button">ответить</button>
                             </li>
