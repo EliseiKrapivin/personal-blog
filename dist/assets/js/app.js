@@ -9,6 +9,16 @@
 /******/ (function() { // webpackBootstrap
 /******/ 	var __webpack_modules__ = ({
 
+/***/ "./src/assets/js/canvas.js":
+/*!*********************************!*\
+  !*** ./src/assets/js/canvas.js ***!
+  \*********************************/
+/***/ (function() {
+
+eval("var canvas = document.getElementById('myCanvas');\r\n  var context = canvas.getContext('2d');\r\n  var isDrawing = false;\r\n  var userInput = [];\r\n\r\n  canvas.addEventListener('mousedown', startDrawing);\r\n  canvas.addEventListener('mousemove', draw);\r\n  canvas.addEventListener('mouseup', stopDrawing);\r\n  canvas.addEventListener('mouseleave', stopDrawing);\r\n\r\n  function startDrawing(e) {\r\n    isDrawing = true;\r\n    context.beginPath();\r\n    context.moveTo(e.clientX - canvas.offsetLeft, e.clientY - canvas.offsetTop);\r\n    userInput.push('mousedown');\r\n  }\r\n\r\n  function draw(e) {\r\n\r\n    context.lineWidth = 2;\r\n    context.lineCap = 'round';\r\n    context.strokeStyle = '#000';\r\n\r\n    context.lineTo(e.clientX - canvas.offsetLeft, e.clientY - canvas.offsetTop);\r\n    context.stroke();\r\n    context.beginPath();\r\n    context.moveTo(e.clientX - canvas.offsetLeft, e.clientY - canvas.offsetTop);\r\n\r\n    userInput.push('mousemove');\r\n  }\r\n\r\n  function stopDrawing() {\r\n    isDrawing = false;\r\n\r\n    // Проверяем, было ли нарисовано тире\r\n    if (userInput.length > 5) { // Минимальная длина для нарисованного тире\r\n      context.font = '20px Arial';\r\n      context.fillStyle = 'white'\r\n      context.fillText('-', 10, 30); // Отображаем тире на холсте\r\n    }\r\n    }\r\n\n\n//# sourceURL=webpack://brainscloud/./src/assets/js/canvas.js?");
+
+/***/ }),
+
 /***/ "./src/assets/js/mobileNav.js":
 /*!************************************!*\
   !*** ./src/assets/js/mobileNav.js ***!
@@ -55,6 +65,7 @@ eval("const textArea = document.querySelectorAll('[data-autoresize]');\r\n\r\nte
 /******/ 	// startup
 /******/ 	// Load entry module and return exports
 /******/ 	// This entry module can't be inlined because the eval devtool is used.
+/******/ 	__webpack_modules__["./src/assets/js/canvas.js"]();
 /******/ 	__webpack_modules__["./src/assets/js/mobileNav.js"]();
 /******/ 	__webpack_modules__["./src/assets/js/modal.js"]();
 /******/ 	__webpack_modules__["./src/assets/js/script.js"]();

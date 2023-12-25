@@ -28,6 +28,13 @@
     }
 }
 
+.sidebar__logo {
+    position: absolute;
+    img {
+        width: 7rem;
+        height: 7rem;
+    }
+}
 .sidebar__header {
     height: 18rem;
     background-color: $secondary ;
